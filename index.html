@@ -14,16 +14,22 @@
 
 <body>
   <ul class="score-board">
-  <li class="team-home"><img src="http://flagpedia.net/data/flags/normal/se.png" alt="Brasil" />Wille</li>
-  <li class="score">1 - 3</li>
-  <li class="team-visitor"><img src="http://flagpedia.net/data/flags/normal/se.png" alt="Argentina" />Malin</li>
+  <li class="team-home"><img src="http://flagpedia.net/data/flags/normal/se.png" alt="Sweden" />Wille</li>
+  <li class="score">2 - 3</li>
+  <li class="team-visitor"><img src="http://flagpedia.net/data/flags/normal/se.png" alt="Sweden" />Malin</li>
   <li class="time">
     <script type="text/javascript">
       now = new Date();
+	  optZero = "";
+	  if (now.getMinutes() < 10) optZero = "0";
+	  optZeroTwo = "";
+	  if (now.getMonth() < 9) optZeroTwo = "0";
       document.write(
         now.getHours()  + ":" +
+		optZero +
         now.getMinutes() + " " +
         now.getDate() + "-" +
+		optZeroTwo +
         (now.getMonth()+1) + "-" +
         now.getFullYear());
     </script>
